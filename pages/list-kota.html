@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Daerah - Budaya Indonesia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Container Utama -->
+    <div class="container mx-auto p-6">
+      <!-- Search Bar -->
+      <div class="mb-6">
+        <input
+          type="text"
+          id="search"
+          placeholder="Cari kota atau provinsi..."
+          class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          onkeyup="filterList()"
+        />
+      </div>
+
+      <!-- List Daerah -->
+      <div
+        id="list-daerah"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Card Daerah akan dimuat secara dinamis oleh JavaScript -->
+      </div>
+    </div>
+
+    <!-- Script JavaScript untuk Fetch Data JSON dan Menampilkan List -->
+    <script>
+      const listContainer = document.getElementById("list-daerah");
+
+      // Fungsi untuk memuat data JSON
+      async function loadData() {
+        try {
+          const response = await fetch("../assets/data/data-daerah.json"); // Mengambil data JSON
+          const data = await response.json();
+
+          // Menampilkan setiap item data sebagai card di list
+          data.forEach((item) => {
+            const card = document.createElement("div");
+            card.classList.add(
+              "bg-white",
+              "rounded-lg",
+              "shadow-lg",
+              "overflow-hidden",
+              "daerah-item"
+            );
+            card.setAttribute("data-name", item.name.toLowerCase());
+
+            // Konten Card
+            card.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold">${item.name}</h3>
+              <p class="text-gray-600 mt-2">${item.description}</p>
+            </div>
+          `;
+
+            listContainer.appendChild(card);
+          });
+        } catch (error) {
+          console.error("Gagal memuat data:", error);
+        }
+      }
+
+      // Fungsi untuk filter pencarian
+      function filterList() {
+        const searchInput = document
+          .getElementById("search")
+          .value.toLowerCase();
+        const daerahItems = document.querySelectorAll(".daerah-item");
+
+        daerahItems.forEach((item) => {
+          const daerahName = item.getAttribute("data-name");
+          if (daerahName.includes(searchInput)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+
+      // Panggil fungsi loadData saat halaman dimuat
+      window.onload = loadData;
+    </script>
+  </body>
+</html>

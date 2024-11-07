@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Bali",
+    "image": "../assets/data/img/bali.jpg",
+    "description": "Bali dikenal sebagai Pulau Dewata dengan keindahan alam, budaya, dan seni yang mendunia."
+  },
+  {
+    "name": "Yogyakarta",
+    "image": "../assets/data/img/yogyakarta.png",
+    "description": "Yogyakarta merupakan pusat budaya dan sejarah, terkenal dengan Candi Borobudur dan Prambanan."
+  },
+  {
+    "name": "Sumatra Utara",
+    "image": "../assets/data/img/sumatra-utara.png",
+    "description": "Dikenal dengan keindahan Danau Toba dan keragaman budaya Batak yang khas."
+  },
+  {
+    "name": "Papua",
+    "image": "../assets/data/img/papua.jpg",
+    "description": "Papua terkenal dengan kekayaan alam, suku asli, dan keindahan alam yang menakjubkan."
+  }
+]

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budaya Indonesia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Bagian Header -->
+    <header
+      class="bg-cover bg-center h-screen text-white"
+      style="background-image: url('assets/img/header-bg.jpg')"
+    >
+      <nav class="bg-black bg-opacity-50 p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Budaya Indonesia</h1>
+        <ul class="flex space-x-4">
+          <li><a href="#tentang" class="hover:text-yellow-400">Tentang</a></li>
+          <li>
+            <a href="#kategori" class="hover:text-yellow-400">Kategori</a>
+          </li>
+          <li>
+            <a href="#virtual-tour" class="hover:text-yellow-400"
+              >Virtual Tour</a
+            >
+          </li>
+          <li><a href="#kontak" class="hover:text-yellow-400">Kontak</a></li>
+        </ul>
+      </nav>
+      <section
+        class="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 p-6"
+      >
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">
+          Selamat Datang di Budaya Indonesia
+        </h1>
+        <p class="text-lg md:text-xl text-center mb-8">
+          Jelajahi keindahan budaya, tradisi, dan warisan Indonesia yang beragam
+        </p>
+        <a
+          href="pages/list-kota.html"
+          class="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-600 transition"
+          >Mulai Eksplorasi</a
+        >
+      </section>
+    </header>
+
+    <!-- Bagian Tentang -->
+    <section id="tentang" class="py-16 px-4 bg-white text-center">
+      <h2 class="text-3xl font-semibold mb-4">Mengenal Budaya Indonesia</h2>
+      <p class="text-lg max-w-2xl mx-auto">
+        Indonesia adalah negara yang kaya akan budaya dan tradisi, dengan lebih
+        dari 300 suku dan berbagai kepercayaan yang mencerminkan identitas yang
+        unik. Website ini didedikasikan untuk memperkenalkan dan melestarikan
+        kebudayaan Indonesia kepada dunia.
+      </p>
+    </section>
+
+    <!-- Bagian Kategori Budaya -->
+    <section id="kategori" class="py-16 bg-gray-50 px-4">
+      <h2 class="text-3xl font-semibold text-center mb-8">Kategori Budaya</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+      >
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img
+            src="assets/img/tari-legong.png"
+            alt="Tari Tradisional"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Kesenian Tradisional</h3>
+            <p class="mt-2 text-gray-600">
+              Eksplorasi tarian, alat musik, dan seni rupa dari berbagai daerah.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img
+            src="assets/img/kuliner.png"
+            alt="Kuliner Tradisional"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Kuliner Nusantara</h3>
+            <p class="mt-2 text-gray-600">
+              Nikmati ragam kuliner lezat dan penuh sejarah dari seluruh penjuru
+              Indonesia.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img
+            src="assets/img/baju-adat.png"
+            alt="Pakaian Adat"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Busana Adat</h3>
+            <p class="mt-2 text-gray-600">
+              Kenali keindahan dan keunikan busana adat dari setiap suku di
+              Indonesia.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img
+            src="assets/img/upacara-adat.png"
+            alt="Ritual Adat"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Upacara Adat</h3>
+            <p class="mt-2 text-gray-600">
+              Pahami makna dan filosofi di balik berbagai ritual dan upacara
+              tradisional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bagian Virtual Tour -->
+    <section id="virtual-tour" class="py-16 bg-white text-center">
+      <h2 class="text-3xl font-semibold mb-4">Virtual Tour</h2>
+      <p class="text-lg max-w-xl mx-auto mb-6">
+        Jelajahi situs budaya dan destinasi bersejarah di Indonesia melalui tur
+        virtual interaktif.
+      </p>
+      <a
+        href="#"
+        class="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-600 transition"
+        >Mulai Virtual Tour</a
+      >
+    </section>
+
+    <!-- Bagian Footer -->
+    <footer class="bg-gray-800 text-gray-200 py-8 text-center">
+      <p>&copy; 2024 Budaya Indonesia. Semua Hak Dilindungi.</p>
+      <p>
+        <a href="#kontak" class="text-yellow-500 hover:text-yellow-600"
+          >Kontak Kami</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
