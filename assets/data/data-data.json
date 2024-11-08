@@ -1,0 +1,45 @@
+{
+  "Bali": {
+    "name": "Bali",
+    "image": "../assets/data/img/bali.jpg",
+    "description": "Bali adalah sebuah pulau di Indonesia yang dikenal karena memiliki pegunungan berapi yang hijau, terasering sawah yang unik, pantai, dan terumbu karang yang cantik. Terdapat banyak tempat wisata religi seperti Pura Uluwatu yang berdiri di atas tebing. Di Selatan, kota pesisir pantai Kuta menawarkan wisata hiburan malam yang tak pernah sepi, sementara Seminyak, Sanur, dan Nusa Dua dikenal dengan suguhan resort yang populer. Pulau Bali juga dikenal sebagai tempat untuk relaksasi dengan yoga dan meditasi.",
+    "culture": "Bali memiliki tradisi Hindu yang kuat, dengan banyak upacara adat, tarian, dan seni ukir.",
+    "popular_places": ["Pantai Kuta", "Ubud", "Tanah Lot", "Gunung Agung"],
+    "pakaian_tradisional": "Payas Alit/Payas Nista. Payas alit atau payas nista adalah baju adat Bali yang paling sederhana dan bisa dipakai sehari-hari, termasuk upacara adat harian di pura. Yang dikenakan biasanya hanya menggunakan kebaya dan songket. Laki-laki pun hanya menggunakan kemeja putih dan dilengkapi dengan kamen serta udeng.",
+    "bahasa": "Bahasa Bali dan Bahasa Indonesia",
+    "upacara_adat": [
+      {
+        "nama": "Ngaben",
+        "deskripsi": "Upacara pembakaran mayat untuk menyucikan roh yang telah meninggal."
+      },
+      {
+        "nama": "Melasti",
+        "deskripsi": "Upacara pembersihan diri dan alam semesta, dilakukan di pantai atau sumber air."
+      }
+    ]
+  },
+  "Yogyakarta": {
+    "name": "Yogyakarta",
+    "image": "img/yogyakarta.jpg",
+    "description": "Yogyakarta merupakan pusat budaya dan sejarah, terkenal dengan Candi Borobudur dan Prambanan.",
+    "culture": "Yogyakarta memiliki kebudayaan Jawa yang kental, termasuk tradisi keraton dan batik.",
+    "popular_places": [
+      "Candi Borobudur",
+      "Candi Prambanan",
+      "Keraton Yogyakarta",
+      "Pantai Parangtritis"
+    ],
+    "pakaian_tradisional": "Pakaian adat Yogyakarta terdiri dari kebaya untuk wanita dan beskap untuk pria.",
+    "bahasa": "Bahasa Jawa dan Bahasa Indonesia",
+    "upacara_adat": [
+      {
+        "nama": "Sekaten",
+        "deskripsi": "Upacara tradisional yang digelar untuk memperingati kelahiran Nabi Muhammad SAW."
+      },
+      {
+        "nama": "Grebeg",
+        "deskripsi": "Upacara persembahan hasil bumi dari Sultan Yogyakarta sebagai simbol kesejahteraan."
+      }
+    ]
+  }
+}

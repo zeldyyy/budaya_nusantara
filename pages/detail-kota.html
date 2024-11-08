@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Daerah - Budaya Indonesia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-6">
+      <!-- Kontainer untuk Detail Daerah -->
+      <div
+        id="detail-container"
+        class="bg-white rounded-lg shadow-lg overflow-hidden"
+      >
+        <!-- Konten Detail akan dimuat secara dinamis oleh JavaScript -->
+      </div>
+    </div>
+
+    <script>
+      // Mendapatkan parameter 'name' dari URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const daerahName = urlParams.get("name");
+
+      // Fungsi untuk menampilkan detail dari JSON
+      async function loadDetailData() {
+        try {
+          const response = await fetch("../assets/data/data-data.json");
+          const data = await response.json();
+
+          // Mengambil data detail sesuai daerah yang dipilih
+          const daerah = data[daerahName];
+
+          if (daerah) {
+            document.getElementById("detail-container").innerHTML = `
+            <img src="${daerah.image}" alt="${
+              daerah.name
+            }" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h2 class="text-3xl font-bold mb-4">${daerah.name}</h2>
+              <p class="text-gray-700 mb-4">${daerah.description}</p>
+              <h3 class="text-2xl font-semibold mt-6">Budaya</h3>
+              <p class="text-gray-700">${daerah.culture}</p>
+              
+              <h3 class="text-2xl font-semibold mt-6">Pakaian Tradisional</h3>
+              <p class="text-gray-700">${daerah.pakaian_tradisional}</p>
+              
+              <h3 class="text-2xl font-semibold mt-6">Bahasa</h3>
+              <p class="text-gray-700">${daerah.bahasa}</p>
+              
+              <h3 class="text-2xl font-semibold mt-6">Upacara Adat</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                ${daerah.upacara_adat
+                  .map(
+                    (upacara) => `
+                  <li>
+                    <strong>${upacara.nama}:</strong> ${upacara.deskripsi}
+                  </li>
+                `
+                  )
+                  .join("")}
+              </ul>
+              
+              <h3 class="text-2xl font-semibold mt-6">Tempat Populer</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                ${daerah.popular_places
+                  .map((place) => `<li>${place}</li>`)
+                  .join("")}
+              </ul>
+            </div>
+          `;
+          } else {
+            document.getElementById("detail-container").innerHTML =
+              "<p>Detail tidak ditemukan.</p>";
+          }
+        } catch (error) {
+          console.error("Gagal memuat data:", error);
+        }
+      }
+
+      // Panggil fungsi saat halaman dimuat
+      window.onload = loadDetailData;
+    </script>
+  </body>
+</html>
